@@ -97,7 +97,7 @@ class MainActivity : AppCompatActivity() {
             return
         }
 
-        val decimal = etInputDecimal.text.toString().toDouble()
+        val decimal = ("0"+etInputDecimal.text.toString()).toDouble()
         // converting decimal to binary
         val binary = convertDecimalToBinary(decimal)
         // converting decimal to octal
@@ -111,6 +111,9 @@ class MainActivity : AppCompatActivity() {
 
     }
     private fun convertDecimalToBinary(decimal: Double): String {
+        if(decimal<0.2){
+            return "0.0"
+        }
         val lShift = (decimal * 2.0.pow(8.0)).toLong()
         val temp = lShift.toString(2)
         val revBinary = temp.reversed()
@@ -118,12 +121,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun convertDecimalToOctal(decimal : Double): String {
+        if(decimal<0.2){
+            return "0.0"
+        }
         val lShift = (decimal * 8.0.pow(8.0)).toLong()
         val temp = lShift.toString(8)
         val revOctal = temp.reversed()
         return (revOctal.substring(0, 8)+"."+revOctal.substring(8)).reversed()
     }
     private fun convertDecimalToHex(decimal: Double): String {
+        if(decimal<0.2){
+            return "0.0"
+        }
         val lShift = (decimal*16.0.pow(8.0)).toLong()
         val temp = lShift.toString(16)
         val revHex = temp.reversed()

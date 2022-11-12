@@ -9,7 +9,6 @@ import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
-import android.widget.Toast
 import androidx.core.content.ContextCompat
 import com.blogspot.atifsoftwares.animatoolib.Animatoo
 import com.google.android.material.snackbar.Snackbar
@@ -97,32 +96,86 @@ class InputBinary : AppCompatActivity() {
             return
         }
 
-        val binary = etInputBinary.text.toString().toLong()
+        val binary = "0"+etInputBinary.text.toString()
         // converting decimal to binary
-        val decimal = convertBinaryToDecimal(binary)
+       if(binary.contains(".")){
+           val decimal = calculateDecimal(binary)
+           tvDecimalOutput.text = decimal.toString()
+       }
+        else{
+            val decimal = convertBinaryToDecimal(binary.toLong())
+           tvDecimalOutput.text = decimal.toString()
+       }
+
+
         // converting decimal to octal
-        val octal = Integer.toOctalString(decimal)
+        if(binary.contains(".")){
+            val decimal =  calculateDecimal(binary)
+            val octal = convertDecimalToOctal(decimal.toDouble())
+            tvOctalOutput.text = octal
+        }else{
+            val decimal = convertBinaryToDecimal(binary.toLong())
+            val octal = decimal.toString(8)
+            tvOctalOutput.text= octal
+        }
         // converting decimal to hexadecimal
-        val hex = Integer.toHexString(decimal)
-        //Updating the UI
-        tvDecimalOutput.text = decimal.toString()
-        tvOctalOutput.text = octal.toString()
-        tvHexDecimalOutput.text = hex.toString().uppercase()
+        if(binary.contains(".")){
+            val decimal = calculateDecimal(binary)
+            val hex = convertDecimalToHex(decimal.toDouble())
+            tvHexDecimalOutput.text= hex
+        }else{
+            val decimal = convertBinaryToDecimal(binary.toLong())
+            val hex = decimal.toString(16)
+            tvHexDecimalOutput.text = hex
+        }
 
     }
 
-    private fun convertBinaryToDecimal(binary: Long): Int {
+
+    private fun convertBinaryToDecimal(binary: Long):  Long{
         var num = binary
-        var decimalNumber = 0
+        var decimalNumber: Long = 0
         var i = 0
         var remainder: Long
 
         while (num.toInt() != 0) {
             remainder = num % 10
             num /= 10
-            decimalNumber += (remainder * 2.0.pow(i.toDouble())).toInt()
+            decimalNumber += (remainder * 2.0.pow(i.toDouble())).toLong()
             ++i
         }
         return decimalNumber
     }
+
+    private fun convertDecimalToOctal(decimal : Double): String {
+        if(decimal<0.2){
+            return "0.0"
+        }
+        val lShift = (decimal * 8.0.pow(8.0)).toLong()
+        val temp = lShift.toString(8)
+        val revOctal = temp.reversed()
+        return (revOctal.substring(0, 8)+"."+revOctal.substring(8)).reversed()
+    }
+
+    private fun convertDecimalToHex(decimal: Double): String {
+        if(decimal<0.2){
+            return "0.0"
+        }
+        val lShift = (decimal*16.0.pow(8.0)).toLong()
+        val temp = lShift.toString(16)
+        val revHex = temp.reversed()
+        return (revHex.substring(0, 8)+"."+revHex.substring(8)).reversed().uppercase()
+    }
+
+    private fun calculateDecimal(binary: String): String{
+        val str = binary.split(".")
+        if(str[0].isEmpty() and str[1].isNotEmpty()){
+            return "0.0"
+        }
+        val decimalFull =(str[0]+str[1]).toLong()
+        val decimal = convertBinaryToDecimal(decimalFull)
+        val d = (decimal/ 2.0.pow(8))
+        return d.toString()
+    }
+
 }

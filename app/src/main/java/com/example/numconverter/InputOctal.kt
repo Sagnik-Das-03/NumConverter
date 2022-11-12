@@ -40,7 +40,7 @@ class InputOctal : AppCompatActivity() {
         btnBinary = findViewById(R.id.btnOctal)
         btnHex = findViewById(R.id.btnBinary)
 
-        // Snackbar implementation
+        // SnackBar implementation
        Snackbar.make(this.findViewById(R.id.octal_Layout),"Enter only numbers between 0 to 7",Snackbar.LENGTH_INDEFINITE)
             .setAction("Ok") {}
             .setActionTextColor(ContextCompat.getColor(this, android.R.color.white))
