@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">numConverter</string>
+    <string name="Decimal">Decimal</string>
+    <string name="Octal">Octal</string>
+    <string name="Binary">Binary</string>
+    <string name="Hexadecimal">Hexa-decimal</string>
+    <string name="etInput">Enter a Number</string>
+    <string name="Change">Change Input Type</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="inputType">Current Input Type</string>
+    <string name="HexChars">0123456789ABCDEFabcdef</string>
+    <string name="OctalChars">01234567</string>
+    <string name="Binarychars">01</string>
+</resources>
