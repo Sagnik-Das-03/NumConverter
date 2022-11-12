@@ -12,6 +12,7 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import com.blogspot.atifsoftwares.animatoolib.Animatoo
 import com.google.android.material.snackbar.Snackbar
+import kotlin.math.pow
 
 
 private const val TAG = "MainActivity"
@@ -96,20 +97,38 @@ class MainActivity : AppCompatActivity() {
             return
         }
 
-        val decimal = etInputDecimal.text.toString().toInt()
+        val decimal = etInputDecimal.text.toString().toDouble()
         // converting decimal to binary
-        val binary = Integer.toBinaryString(decimal)
+        val binary = convertDecimalToBinary(decimal)
         // converting decimal to octal
-        val octal = Integer.toOctalString(decimal)
+        val octal = convertDecimalToOctal(decimal)
         // converting decimal to hexadecimal
-        val hex = Integer.toHexString(decimal)
+        val hex = convertDecimalToHex(decimal)
         //Updating the UI
-        tvBinaryOutput.text = binary.toString()
-        tvOctalOutput.text = octal.toString()
-        tvHexaDecimalOutput.text = hex.toString().uppercase()
+        tvBinaryOutput.text = binary
+        tvOctalOutput.text = octal
+        tvHexaDecimalOutput.text = hex
 
     }
+    private fun convertDecimalToBinary(decimal: Double): String {
+        val lShift = (decimal * 2.0.pow(8.0)).toLong()
+        val temp = lShift.toString(2)
+        val revBinary = temp.reversed()
+        return (revBinary.substring(0, 8) + "." + revBinary.substring(8)).reversed()
+    }
 
+    private fun convertDecimalToOctal(decimal : Double): String {
+        val lShift = (decimal * 8.0.pow(8.0)).toLong()
+        val temp = lShift.toString(8)
+        val revOctal = temp.reversed()
+        return (revOctal.substring(0, 8)+"."+revOctal.substring(8)).reversed()
+    }
+    private fun convertDecimalToHex(decimal: Double): String {
+        val lShift = (decimal*16.0.pow(8.0)).toLong()
+        val temp = lShift.toString(16)
+        val revHex = temp.reversed()
+        return (revHex.substring(0, 8)+"."+revHex.substring(8)).reversed().uppercase()
+    }
 
 
 }
