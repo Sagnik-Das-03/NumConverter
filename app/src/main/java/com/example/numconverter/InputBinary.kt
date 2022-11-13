@@ -96,7 +96,7 @@ class InputBinary : AppCompatActivity() {
             return
         }
 
-        val binary = "0"+etInputBinary.text.toString()
+        val binary = HEADING_ZERO+etInputBinary.text.toString()
         // converting decimal to binary
        if(binary.contains(".")){
            val decimal = calculateDecimal(binary)

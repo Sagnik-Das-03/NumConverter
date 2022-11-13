@@ -14,7 +14,7 @@ import com.blogspot.atifsoftwares.animatoolib.Animatoo
 import com.google.android.material.snackbar.Snackbar
 import kotlin.math.pow
 
-
+const val HEADING_ZERO = "0"
 private const val TAG = "MainActivity"
 class MainActivity : AppCompatActivity() {
     //Left Views
@@ -97,7 +97,7 @@ class MainActivity : AppCompatActivity() {
             return
         }
 
-        val decimal = ("0"+etInputDecimal.text.toString()).toDouble()
+        val decimal = (HEADING_ZERO+etInputDecimal.text.toString()).toDouble()
         // converting decimal to binary
         val binary = convertDecimalToBinary(decimal)
         // converting decimal to octal
@@ -111,7 +111,7 @@ class MainActivity : AppCompatActivity() {
 
     }
     private fun convertDecimalToBinary(decimal: Double): String {
-        if(decimal<0.2){
+        if(decimal<0.5){
             return "0.0"
         }
         val lShift = (decimal * 2.0.pow(8.0)).toLong()
