@@ -14,7 +14,7 @@ import com.blogspot.atifsoftwares.animatoolib.Animatoo
 import com.google.android.material.snackbar.Snackbar
 import kotlin.math.pow
 
-const val HEADING_ZERO = "0"
+const val LEADING_ZERO = "0"
 private const val TAG = "MainActivity"
 class MainActivity : AppCompatActivity() {
     //Left Views
@@ -97,7 +97,7 @@ class MainActivity : AppCompatActivity() {
             return
         }
 
-        val decimal = (HEADING_ZERO+etInputDecimal.text.toString()).toDouble()
+        val decimal = (LEADING_ZERO+etInputDecimal.text.toString()).toDouble()
         // converting decimal to binary
         val binary = convertDecimalToBinary(decimal)
         // converting decimal to octal
@@ -111,30 +111,21 @@ class MainActivity : AppCompatActivity() {
 
     }
     private fun convertDecimalToBinary(decimal: Double): String {
-        if(decimal<0.5){
-            return "0.0"
-        }
         val lShift = (decimal * 2.0.pow(8.0)).toLong()
-        val temp = lShift.toString(2)
+        val temp = lShift.toString(2).padStart(9,'0')
         val revBinary = temp.reversed()
         return (revBinary.substring(0, 8) + "." + revBinary.substring(8)).reversed()
     }
 
     private fun convertDecimalToOctal(decimal : Double): String {
-        if(decimal<0.2){
-            return "0.0"
-        }
         val lShift = (decimal * 8.0.pow(8.0)).toLong()
-        val temp = lShift.toString(8)
+        val temp = lShift.toString(8).padStart(9,'0')
         val revOctal = temp.reversed()
         return (revOctal.substring(0, 8)+"."+revOctal.substring(8)).reversed()
     }
     private fun convertDecimalToHex(decimal: Double): String {
-        if(decimal<0.2){
-            return "0.0"
-        }
         val lShift = (decimal*16.0.pow(8.0)).toLong()
-        val temp = lShift.toString(16)
+        val temp = lShift.toString(16).padStart(9,'0')
         val revHex = temp.reversed()
         return (revHex.substring(0, 8)+"."+revHex.substring(8)).reversed().uppercase()
     }
