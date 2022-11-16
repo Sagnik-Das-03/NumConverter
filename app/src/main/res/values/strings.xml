@@ -11,6 +11,6 @@
     <string name="tab_text_2">Tab 2</string>
     <string name="inputType">Current Input Type</string>
     <string name="HexChars">0123456789ABCDEFabcdef</string>
-    <string name="OctalChars">01234567</string>
+    <string name="OctalChars">.01234567</string>
     <string name="Binarychars">.01</string>
 </resources>

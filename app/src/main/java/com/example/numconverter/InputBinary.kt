@@ -149,9 +149,9 @@ class InputBinary : AppCompatActivity() {
 
     private fun convertDecimalToOctal(decimal : Double): String {
         val lShift = (decimal * 8.0.pow(8.0)).toLong()
-        val temp = lShift.toString(8).padStart(10,'0')
+        val temp = lShift.toString(8).padStart(9,'0')
         val revOctal = temp.reversed()
-        return (revOctal.substring(0, 8)+"."+revOctal.substring(9)).reversed()
+        return (revOctal.substring(0, 8)+"."+revOctal.substring(8)).reversed()
     }
 
     private fun convertDecimalToHex(decimal: Double): String {
