@@ -103,6 +103,18 @@
         app:layout_constraintVertical_bias="0.842" />
 
     <TextView
+        android:id="@+id/tvBinaryOutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:textColor="#367FEB"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tvBinary"
+        app:layout_constraintStart_toEndOf="@+id/tvBinary"
+        app:layout_constraintTop_toTopOf="@+id/tvBinary" />
+
+    <TextView
         android:id="@+id/tvDecimalOutput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -125,19 +137,6 @@
         app:layout_constraintBottom_toBottomOf="@+id/tvOctal"
         app:layout_constraintStart_toEndOf="@+id/tvOctal"
         app:layout_constraintTop_toTopOf="@+id/tvOctal" />
-
-    <TextView
-        android:id="@+id/tvBinaryOutput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:textColor="#367FEB"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/tvBinary"
-        app:layout_constraintStart_toEndOf="@+id/tvBinary"
-        app:layout_constraintTop_toTopOf="@+id/tvBinary" />
-
     <LinearLayout
         android:id="@+id/buttonLayout"
         android:layout_width="match_parent"
