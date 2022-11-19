@@ -125,7 +125,6 @@ class InputHex : AppCompatActivity() {
             val decimal = hex.toLong(16)
             val binary = decimal.toString(2)
             tvBinaryOutput.text = binary
-            tvBinaryOutput.movementMethod = ScrollingMovementMethod()
         }
 
 

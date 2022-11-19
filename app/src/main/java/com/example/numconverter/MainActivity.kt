@@ -99,7 +99,7 @@ class MainActivity : AppCompatActivity() {
 
         val decimal = LEADING_ZERO+etInputDecimal.text.toString()
         // converting decimal to binary
-        if(decimal.toString().contains(".")){
+        if(decimal.contains(".")){
             val binary = convertDecimalToBinary(decimal.toDouble())
             tvBinaryOutput.text = binary
         }else{
@@ -107,7 +107,7 @@ class MainActivity : AppCompatActivity() {
             tvBinaryOutput.text = binary
         }
         // converting decimal to octal
-        if(decimal.toString().contains(".")){
+        if(decimal.contains(".")){
             val octal = convertDecimalToOctal(decimal.toDouble())
             tvOctalOutput.text = octal
         }else{
@@ -115,7 +115,7 @@ class MainActivity : AppCompatActivity() {
             tvOctalOutput.text = octal
         }
         // converting decimal to hexadecimal
-        if (decimal.toString().contains(".")){
+        if (decimal.contains(".")){
             val hex = convertDecimalToHex(decimal.toDouble())
             tvHexaDecimalOutput.text = hex
         }else{

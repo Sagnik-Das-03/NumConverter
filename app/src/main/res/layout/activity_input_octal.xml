@@ -5,7 +5,7 @@
     android:id="@+id/octal_Layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="3dp"
+    android:layout_margin="5dp"
     tools:context=".InputOctal">
     <!--Left Components -->
     <TextView
@@ -113,6 +113,7 @@
         android:layout_marginStart="32dp"
         android:background="@drawable/footer_rounded"
         android:backgroundTint="#26673AB7"
+        android:maxWidth="200dp"
         android:textColor="#673AB7"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -127,6 +128,7 @@
         android:layout_marginStart="32dp"
         android:background="@drawable/footer_rounded"
         android:backgroundTint="#262196F3"
+        android:maxWidth="200dp"
         android:textColor="#FF154C9E"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -141,6 +143,7 @@
         android:layout_marginStart="32dp"
         android:background="@drawable/footer_rounded"
         android:backgroundTint="#26009688"
+        android:maxWidth="200dp"
         android:textColor="#009688"
         android:textSize="20sp"
         android:textStyle="bold"
