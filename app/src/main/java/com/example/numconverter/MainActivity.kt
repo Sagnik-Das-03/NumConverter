@@ -97,17 +97,31 @@ class MainActivity : AppCompatActivity() {
             return
         }
 
-        val decimal = (LEADING_ZERO+etInputDecimal.text.toString()).toDouble()
+        val decimal = LEADING_ZERO+etInputDecimal.text.toString()
         // converting decimal to binary
-        val binary = convertDecimalToBinary(decimal)
+        if(decimal.toString().contains(".")){
+            val binary = convertDecimalToBinary(decimal.toDouble())
+            tvBinaryOutput.text = binary
+        }else{
+            val binary = decimal.toLong().toString(2)
+            tvBinaryOutput.text = binary
+        }
         // converting decimal to octal
-        val octal = convertDecimalToOctal(decimal)
+        if(decimal.toString().contains(".")){
+            val octal = convertDecimalToOctal(decimal.toDouble())
+            tvOctalOutput.text = octal
+        }else{
+            val octal = decimal.toLong().toString(8)
+            tvOctalOutput.text = octal
+        }
         // converting decimal to hexadecimal
-        val hex = convertDecimalToHex(decimal)
-        //Updating the UI
-        tvBinaryOutput.text = binary
-        tvOctalOutput.text = octal
-        tvHexaDecimalOutput.text = hex
+        if (decimal.toString().contains(".")){
+            val hex = convertDecimalToHex(decimal.toDouble())
+            tvHexaDecimalOutput.text = hex
+        }else{
+            val hex = decimal.toLong().toString(16)
+            tvHexaDecimalOutput.text = hex
+        }
 
     }
     private fun convertDecimalToBinary(decimal: Double): String {
