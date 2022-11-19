@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
         tvOctalOutput = findViewById(R.id.tvOctalOutput)
         tvHexaDecimalOutput = findViewById(R.id.tvBinaryOutput)
         //Buttons View Binding
-        btnBinary = findViewById(R.id.btnBinary)
+        btnBinary = findViewById(R.id.btnDecimal)
         btnOctal = findViewById(R.id.btnOctal)
         btnHex = findViewById(R.id.btnHex)
 

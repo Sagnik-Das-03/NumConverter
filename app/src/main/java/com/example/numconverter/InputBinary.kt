@@ -45,7 +45,7 @@ class InputBinary : AppCompatActivity() {
         tvOctalOutput = findViewById(R.id.tvOctalOutput)
         tvHexDecimalOutput = findViewById(R.id.tvBinaryOutput)
         //Buttons View Binding
-        btnDecimal = findViewById(R.id.btnBinary)
+        btnDecimal = findViewById(R.id.btnDecimal)
         btnOctal = findViewById(R.id.btnOctal)
         btnHex = findViewById(R.id.btnHex)
 
