@@ -9,7 +9,7 @@
     tools:context=".InputHex">
     <!--Left Components -->
     <TextView
-        android:id="@+id/tvHex"
+        android:id="@+id/tvDecimal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -29,7 +29,7 @@
         tools:visibility="visible" />
 
     <TextView
-        android:id="@+id/tvDecimal"
+        android:id="@+id/tvBinary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
@@ -41,8 +41,8 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="@+id/tvHex"
-        app:layout_constraintTop_toBottomOf="@+id/tvHex"
+        app:layout_constraintEnd_toEndOf="@+id/tvDecimal"
+        app:layout_constraintTop_toBottomOf="@+id/tvDecimal"
         tools:visibility="visible" />
 
     <TextView
@@ -58,15 +58,15 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="@+id/tvHex"
-        app:layout_constraintTop_toBottomOf="@+id/tvDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/tvDecimal"
+        app:layout_constraintTop_toBottomOf="@+id/tvBinary"
         tools:visibility="visible" />
 
     <!--Right Components -->
 
 
     <TextView
-        android:id="@+id/tvBinary"
+        android:id="@+id/tvHex"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -78,11 +78,11 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="@+id/tvHex"
+        app:layout_constraintEnd_toEndOf="@+id/tvDecimal"
         app:layout_constraintTop_toBottomOf="@+id/tvOctal" />
 
     <EditText
-        android:id="@+id/etInputHex"
+        android:id="@+id/etInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -95,11 +95,11 @@
         android:imeOptions="actionDone"
         android:textAlignment="center"
         android:textColorHint="#757575"
-        app:layout_constraintBottom_toBottomOf="@+id/tvHex"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.184"
-        app:layout_constraintStart_toEndOf="@+id/tvHex"
-        app:layout_constraintTop_toTopOf="@+id/tvHex"
+        app:layout_constraintStart_toEndOf="@+id/tvDecimal"
+        app:layout_constraintTop_toTopOf="@+id/tvDecimal"
         app:layout_constraintVertical_bias="0.842" />
 
     <TextView
@@ -110,9 +110,9 @@
         android:textColor="#367FEB"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/tvBinary"
-        app:layout_constraintStart_toEndOf="@+id/tvBinary"
-        app:layout_constraintTop_toTopOf="@+id/tvBinary" />
+        app:layout_constraintBottom_toBottomOf="@+id/tvHex"
+        app:layout_constraintStart_toEndOf="@+id/tvHex"
+        app:layout_constraintTop_toTopOf="@+id/tvHex" />
 
     <TextView
         android:id="@+id/tvDecimalOutput"
@@ -122,9 +122,9 @@
         android:textColor="#154C9E"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/tvDecimal"
-        app:layout_constraintStart_toEndOf="@+id/tvDecimal"
-        app:layout_constraintTop_toTopOf="@+id/tvDecimal" />
+        app:layout_constraintBottom_toBottomOf="@+id/tvBinary"
+        app:layout_constraintStart_toEndOf="@+id/tvBinary"
+        app:layout_constraintTop_toTopOf="@+id/tvBinary" />
 
     <TextView
         android:id="@+id/tvOctalOutput"
@@ -148,11 +148,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvBinary"
+        app:layout_constraintTop_toBottomOf="@+id/tvHex"
         app:layout_constraintVertical_bias="0.201">
 
         <Button
-            android:id="@+id/btnDecimal"
+            android:id="@+id/btnBinary"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -179,7 +179,7 @@
             tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
 
         <Button
-            android:id="@+id/btnBinary"
+            android:id="@+id/btnHex"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -209,7 +209,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/buttonLayout"
-        app:layout_constraintTop_toBottomOf="@+id/tvBinary"
+        app:layout_constraintTop_toBottomOf="@+id/tvHex"
         app:layout_constraintVertical_bias="1.0" />
     <!-- Footer -->
     <LinearLayout

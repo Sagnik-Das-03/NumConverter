@@ -9,7 +9,6 @@ import android.text.method.ScrollingMovementMethod
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
-import android.widget.HorizontalScrollView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import com.blogspot.atifsoftwares.animatoolib.Animatoo
@@ -36,19 +35,19 @@ class InputHex : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_input_hex)
         //Left Views View Binding
-        tvHexDecimal = findViewById(R.id.tvHex)
-        tvDecimal = findViewById(R.id.tvDecimal)
+        tvHexDecimal = findViewById(R.id.tvDecimal)
+        tvDecimal = findViewById(R.id.tvBinary)
         tvOctal = findViewById(R.id.tvOctal)
-        tvBinary = findViewById(R.id.tvBinary)
+        tvBinary = findViewById(R.id.tvHex)
         //Right Views View Binding
-        etInputHex= findViewById(R.id.etInputHex)
+        etInputHex= findViewById(R.id.etInput)
         tvDecimalOutput = findViewById(R.id.tvDecimalOutput)
         tvOctalOutput = findViewById(R.id.tvOctalOutput)
         tvBinaryOutput = findViewById(R.id.tvBinaryOutput)
         //Buttons View Binding
-        btnDecimal = findViewById(R.id.btnDecimal)
+        btnDecimal = findViewById(R.id.btnBinary)
         btnOctal = findViewById(R.id.btnOctal)
-        btnBinary = findViewById(R.id.btnBinary)
+        btnBinary = findViewById(R.id.btnHex)
 
         //Snackbar implementation
         Snackbar.make(this.findViewById(R.id.hex_Layout),"Enter only numbers & characters between A & F",Snackbar.LENGTH_INDEFINITE)
@@ -97,9 +96,7 @@ class InputHex : AppCompatActivity() {
 
         //calculating and converting values from input
         val hex = (LEADING_ZERO+etInputHex.text.toString().uppercase())
-        if(hex.toLong()<Long.MAX_VALUE || hex.toDouble()<Double.MAX_VALUE){
-            return
-        }
+
         // converting hex to decimal
        if(hex.contains(".")){
            val decimal = convertHexToDecimal(hex)

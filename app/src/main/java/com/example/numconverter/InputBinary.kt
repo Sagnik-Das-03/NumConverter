@@ -35,19 +35,19 @@ class InputBinary : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_input_binary)
         //Left Views View Binding
-        tvBinary = findViewById(R.id.tvHex)
-        tvDecimal = findViewById(R.id.tvDecimal)
+        tvBinary = findViewById(R.id.tvDecimal)
+        tvDecimal = findViewById(R.id.tvBinary)
         tvOctal = findViewById(R.id.tvOctal)
-        tvHexDecimal = findViewById(R.id.tvBinary)
+        tvHexDecimal = findViewById(R.id.tvHex)
         //Right Views View Binding
-        etInputBinary= findViewById(R.id.etInputHex)
+        etInputBinary= findViewById(R.id.etInput)
         tvDecimalOutput = findViewById(R.id.tvDecimalOutput)
         tvOctalOutput = findViewById(R.id.tvOctalOutput)
         tvHexDecimalOutput = findViewById(R.id.tvBinaryOutput)
         //Buttons View Binding
-        btnDecimal = findViewById(R.id.btnDecimal)
+        btnDecimal = findViewById(R.id.btnBinary)
         btnOctal = findViewById(R.id.btnOctal)
-        btnHex = findViewById(R.id.btnBinary)
+        btnHex = findViewById(R.id.btnHex)
 
         //SnackBar implementation
         Snackbar.make(this.findViewById(R.id.binary_Layout),"Enter numbers only 0 & 1",Snackbar.LENGTH_INDEFINITE)

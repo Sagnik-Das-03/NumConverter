@@ -37,19 +37,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         //Left Views View Binding
-        tvDecimal = findViewById(R.id.tvHex)
-        tvBinary = findViewById(R.id.tvDecimal)
+        tvDecimal = findViewById(R.id.tvDecimal)
+        tvBinary = findViewById(R.id.tvBinary)
         tvOctal = findViewById(R.id.tvOctal)
-        tvHexaDecimal = findViewById(R.id.tvBinary)
+        tvHexaDecimal = findViewById(R.id.tvHex)
         //Right Views View Binding
-        etInputDecimal = findViewById(R.id.etInputHex)
+        etInputDecimal = findViewById(R.id.etInput)
         tvBinaryOutput = findViewById(R.id.tvDecimalOutput)
         tvOctalOutput = findViewById(R.id.tvOctalOutput)
         tvHexaDecimalOutput = findViewById(R.id.tvBinaryOutput)
         //Buttons View Binding
-        btnBinary = findViewById(R.id.btnDecimal)
+        btnBinary = findViewById(R.id.btnBinary)
         btnOctal = findViewById(R.id.btnOctal)
-        btnHex = findViewById(R.id.btnBinary)
+        btnHex = findViewById(R.id.btnHex)
 
         //SnackBar implementation
         Snackbar.make(this.findViewById(R.id.mainLayout),"Enter a Number", Snackbar.LENGTH_INDEFINITE)

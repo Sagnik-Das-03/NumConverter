@@ -13,37 +13,41 @@
 
     <!--Left Components -->
     <TextView
-        android:id="@+id/tvHex"
+        android:id="@+id/tvDecimal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:background="#3CAEABAB"
+        android:background="@drawable/rounded_corner"
         android:fontFamily="sans-serif-condensed"
         android:padding="5dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
         android:text="@string/Decimal"
         android:textAllCaps="false"
-        android:textSize="20sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="@+id/tvBinary"
+        app:layout_constraintEnd_toEndOf="@+id/tvHex"
         app:layout_constraintTop_toTopOf="parent"
         tools:visibility="visible" />
 
     <TextView
-        android:id="@+id/tvDecimal"
+        android:id="@+id/tvBinary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
-        android:background="#3CAEABAB"
+        android:background="@drawable/rounded_corner"
         android:fontFamily="sans-serif-condensed"
         android:padding="5dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
         android:text="@string/Binary"
         android:textAllCaps="false"
-        android:textSize="20sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="@+id/tvBinary"
-        app:layout_constraintTop_toBottomOf="@+id/tvHex"
+        app:layout_constraintEnd_toEndOf="@+id/tvHex"
+        app:layout_constraintTop_toBottomOf="@+id/tvDecimal"
         tools:visibility="visible" />
 
     <TextView
@@ -51,30 +55,34 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
-        android:background="#3CAEABAB"
+        android:background="@drawable/rounded_corner"
         android:fontFamily="sans-serif-condensed"
         android:padding="5dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
         android:text="@string/Octal"
         android:textAllCaps="false"
-        android:textSize="20sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="@+id/tvBinary"
-        app:layout_constraintTop_toBottomOf="@+id/tvDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/tvHex"
+        app:layout_constraintTop_toBottomOf="@+id/tvBinary"
         tools:visibility="visible" />
 
     <TextView
-        android:id="@+id/tvBinary"
+        android:id="@+id/tvHex"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="36dp"
-        android:background="#3CAEABAB"
+        android:background="@drawable/rounded_corner"
         android:fontFamily="sans-serif-condensed"
         android:padding="5dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
         android:text="@string/Hexadecimal"
         android:textAllCaps="false"
-        android:textSize="20sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
@@ -82,24 +90,26 @@
 
     <!--Right Components -->
 
-
     <EditText
-        android:id="@+id/etInputHex"
+        android:id="@+id/etInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:autofillHints=""
+        android:background="@drawable/footer_rounded"
+        android:backgroundTint="#1A673AB7"
         android:ems="10"
         android:hint="@string/etInput"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
         android:textAlignment="center"
         android:textColorHint="#757575"
-        app:layout_constraintBottom_toBottomOf="@+id/tvHex"
+        android:textCursorDrawable="@drawable/cursor"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.184"
-        app:layout_constraintStart_toEndOf="@+id/tvHex"
-        app:layout_constraintTop_toTopOf="@+id/tvHex"
+        app:layout_constraintStart_toEndOf="@+id/tvDecimal"
+        app:layout_constraintTop_toTopOf="@+id/tvDecimal"
         app:layout_constraintVertical_bias="0.842" />
 
     <TextView
@@ -107,19 +117,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
+        android:background="@drawable/footer_rounded"
+        android:backgroundTint="#262196F3"
         android:textColor="#154C9E"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/tvDecimal"
-        app:layout_constraintStart_toEndOf="@+id/tvDecimal"
-        app:layout_constraintTop_toTopOf="@+id/tvDecimal" />
+        app:layout_constraintBottom_toBottomOf="@+id/tvBinary"
+        app:layout_constraintStart_toEndOf="@+id/tvBinary"
+        app:layout_constraintTop_toTopOf="@+id/tvBinary" />
 
     <TextView
         android:id="@+id/tvOctalOutput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:textColor="#EB5D4B"
+        android:background="@drawable/footer_rounded"
+        android:backgroundTint="#26009688"
+        android:textColor="#009688"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/tvOctal"
@@ -131,12 +145,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:textColor="#367FEB"
+        android:background="@drawable/footer_rounded"
+        android:backgroundTint="#26FF9800"
+        android:textColor="#FF9800"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/tvBinary"
-        app:layout_constraintStart_toEndOf="@+id/tvBinary"
-        app:layout_constraintTop_toTopOf="@+id/tvBinary" />
+        app:layout_constraintBottom_toBottomOf="@+id/tvHex"
+        app:layout_constraintStart_toEndOf="@+id/tvHex"
+        app:layout_constraintTop_toTopOf="@+id/tvHex" />
 
     <LinearLayout
         android:id="@+id/buttonLayout"
@@ -149,48 +165,51 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvBinary"
+        app:layout_constraintTop_toBottomOf="@+id/tvHex"
         app:layout_constraintVertical_bias="0.201">
 
-        <Button
-            android:id="@+id/btnDecimal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:layout_weight="1"
-            android:backgroundTint="#2196F3"
-            android:minHeight="48dp"
-            android:text="@string/Binary"
-            android:textColor="@color/white"
-            app:rippleColor="#4CAF50"
-            tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck"
-            style="?android:attr/buttonBarButtonStyle" />
-
-        <Button
-            android:id="@+id/btnOctal"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:layout_weight="1"
-            android:backgroundTint="@color/teal_700"
-            android:text="@string/Octal"
-            android:textColor="@color/white"
-            app:rippleColor="@color/purple_700"
-            tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
-
-        <Button
+        <soup.neumorphism.NeumorphButton
             android:id="@+id/btnBinary"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
             android:layout_weight="1"
-            android:backgroundTint="#00BCD4"
+            android:minHeight="48dp"
+            android:text="@string/Binary"
+            android:textColor="@color/white"
+            app:neumorph_backgroundColor="#882196F3"
+            app:neumorph_shadowColorDark="#4D2196F3"
+            app:neumorph_shadowColorLight="#1A2196F3"
+            app:neumorph_shapeType="flat"
+            tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
+
+        <soup.neumorphism.NeumorphButton
+            android:id="@+id/btnOctal"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:layout_weight="1"
+            android:text="@string/Octal"
+            android:textColor="@color/white"
+            app:neumorph_backgroundColor="#87009688"
+            app:neumorph_shadowColorDark="#4D009688"
+            app:neumorph_shadowColorLight="#1A009688"
+            tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
+
+        <soup.neumorphism.NeumorphButton
+            android:id="@+id/btnHex"
+            style="@style/Widget.Neumorph.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:layout_weight="1"
             android:text="@string/Hexadecimal"
             android:textColor="@color/white"
-            app:rippleColor="#FF5722"
-            tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
+            app:neumorph_backgroundColor="#99FF9800"
+            app:neumorph_shadowColorDark="#4DFF9800"
+            app:neumorph_shadowColorLight="#1AFF9800" />
     </LinearLayout>
 
     <TextView
@@ -201,7 +220,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="8dp"
-        android:background="#4A7B7F81"
+        android:background="@drawable/rounded_corner"
         android:text="@string/Change"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -209,8 +228,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/buttonLayout"
-        app:layout_constraintTop_toBottomOf="@+id/tvBinary"
+        app:layout_constraintTop_toBottomOf="@+id/tvHex"
         app:layout_constraintVertical_bias="1.0" />
+
     <LinearLayout
         android:id="@+id/footerLayout"
         android:layout_width="wrap_content"
@@ -218,7 +238,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
-        android:background="#33575553"
+        android:background="@drawable/rounded_corner"
         android:orientation="horizontal"
         android:padding="5dp"
         app:circularflow_radiusInDP="4dp"
@@ -231,9 +251,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:background="#3E2196F3"
-            android:paddingStart="5dp"
-            android:paddingEnd="5dp"
+            android:background="@drawable/footer_rounded"
+            android:backgroundTint="#3E2196F3"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
             android:text="@string/inputType"
             android:textStyle="bold" />
 
@@ -243,9 +264,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
-            android:background="#673AB7"
-            android:paddingStart="5dp"
-            android:paddingEnd="5dp"
+            android:background="@drawable/footer_rounded"
+            android:backgroundTint="#B3673AB7"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
             android:text="@string/Decimal"
             android:textAlignment="center"
             android:textColor="#FFFFFF"

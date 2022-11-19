@@ -30,14 +30,14 @@ class InputOctal : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_input_octal)
         //Right Views View Binding
-        etInputOctal = findViewById(R.id.etInputHex)
+        etInputOctal = findViewById(R.id.etInput)
         tvDecimalOutput = findViewById(R.id.tvDecimalOutput)
         tvBinaryOutput = findViewById(R.id.tvOctalOutput)
         tvHexDecimalOutput = findViewById(R.id.tvBinaryOutput)
         //Buttons View Binding
-        btnDecimal= findViewById(R.id.btnDecimal)
+        btnDecimal= findViewById(R.id.btnBinary)
         btnBinary = findViewById(R.id.btnOctal)
-        btnHex = findViewById(R.id.btnBinary)
+        btnHex = findViewById(R.id.btnHex)
 
         // SnackBar implementation
        Snackbar.make(this.findViewById(R.id.octal_Layout),"Enter only numbers between 0 to 7",Snackbar.LENGTH_INDEFINITE)

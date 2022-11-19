@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/sagni/AndroidStudioProjects/numConverter/app/src/main/res/drawable/cursor.xml" value="0.2505" />
+        <entry key="..\:/Users/sagni/AndroidStudioProjects/numConverter/app/src/main/res/drawable/footer_rounded.xml" value="0.2505" />
+        <entry key="..\:/Users/sagni/AndroidStudioProjects/numConverter/app/src/main/res/drawable/rounded_corner.xml" value="0.2505" />
         <entry key="..\:/Users/sagni/AndroidStudioProjects/numConverter/app/src/main/res/layout/activity_history.xml" value="0.22780797101449277" />
         <entry key="..\:/Users/sagni/AndroidStudioProjects/numConverter/app/src/main/res/layout/activity_input_binary.xml" value="0.25" />
         <entry key="..\:/Users/sagni/AndroidStudioProjects/numConverter/app/src/main/res/layout/activity_input_hex.xml" value="0.264" />
@@ -17,12 +20,5 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.264" />
-      </ProjectState>
-    </option>
   </component>
 </project>
