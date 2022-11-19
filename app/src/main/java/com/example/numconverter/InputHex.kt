@@ -97,7 +97,9 @@ class InputHex : AppCompatActivity() {
 
         //calculating and converting values from input
         val hex = (LEADING_ZERO+etInputHex.text.toString().uppercase())
-
+        if(hex.toLong()<Long.MAX_VALUE || hex.toDouble()<Double.MAX_VALUE){
+            return
+        }
         // converting hex to decimal
        if(hex.contains(".")){
            val decimal = convertHexToDecimal(hex)
@@ -128,7 +130,6 @@ class InputHex : AppCompatActivity() {
             tvBinaryOutput.text = binary
             tvBinaryOutput.movementMethod = ScrollingMovementMethod()
         }
-
 
 
     }
