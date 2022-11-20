@@ -41,9 +41,11 @@ class InputOctal : AppCompatActivity() {
 
         // SnackBar implementation
        Snackbar.make(this.findViewById(R.id.octal_Layout),"Enter only numbers between 0 to 7",Snackbar.LENGTH_INDEFINITE)
-            .setAction("Ok") {}
-            .setActionTextColor(ContextCompat.getColor(this, android.R.color.white))
-            .show()
+           .setAction("Ok"){ }
+           .setActionTextColor(ContextCompat.getColor(this, R.color.textColor))
+           .setTextColor(ContextCompat.getColor(this, R.color.textColor))
+           .setBackgroundTint(ContextCompat.getColor(this,R.color.snackBar))
+           .show()
 
         etInputOctal.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {  }

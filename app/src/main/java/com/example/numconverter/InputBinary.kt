@@ -52,7 +52,9 @@ class InputBinary : AppCompatActivity() {
         //SnackBar implementation
         Snackbar.make(this.findViewById(R.id.binary_Layout),"Enter numbers only 0 & 1",Snackbar.LENGTH_INDEFINITE)
             .setAction("Ok"){ }
-            .setActionTextColor(ContextCompat.getColor(this, android.R.color.white))
+            .setActionTextColor(ContextCompat.getColor(this, R.color.textColor))
+            .setTextColor(ContextCompat.getColor(this, R.color.textColor))
+            .setBackgroundTint(ContextCompat.getColor(this,R.color.snackBar))
             .show()
 
         etInputBinary.addTextChangedListener(object : TextWatcher {

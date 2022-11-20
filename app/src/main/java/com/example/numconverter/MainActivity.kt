@@ -12,6 +12,7 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import com.blogspot.atifsoftwares.animatoolib.Animatoo
 import com.google.android.material.snackbar.Snackbar
+import java.text.DecimalFormat
 import kotlin.math.pow
 
 const val LEADING_ZERO = "0"
@@ -54,7 +55,9 @@ class MainActivity : AppCompatActivity() {
         //SnackBar implementation
         Snackbar.make(this.findViewById(R.id.mainLayout),"Enter a Number", Snackbar.LENGTH_INDEFINITE)
             .setAction("Ok"){ }
-            .setActionTextColor(ContextCompat.getColor(this, android.R.color.white))
+            .setActionTextColor(ContextCompat.getColor(this, R.color.textColor))
+            .setTextColor(ContextCompat.getColor(this, R.color.textColor))
+            .setBackgroundTint(ContextCompat.getColor(this,R.color.snackBar))
             .show()
 
         etInputDecimal.addTextChangedListener(object :TextWatcher{

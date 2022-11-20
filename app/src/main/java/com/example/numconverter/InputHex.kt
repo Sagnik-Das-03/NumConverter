@@ -49,10 +49,12 @@ class InputHex : AppCompatActivity() {
         btnOctal = findViewById(R.id.btnOctal)
         btnBinary = findViewById(R.id.btnHex)
 
-        //Snackbar implementation
+        //SnackBar implementation
         Snackbar.make(this.findViewById(R.id.hex_Layout),"Enter only numbers & characters between A & F",Snackbar.LENGTH_INDEFINITE)
             .setAction("Ok"){ }
-            .setActionTextColor(ContextCompat.getColor(this, android.R.color.white))
+            .setActionTextColor(ContextCompat.getColor(this, R.color.textColor))
+            .setTextColor(ContextCompat.getColor(this, R.color.textColor))
+            .setBackgroundTint(ContextCompat.getColor(this,R.color.snackBar))
             .show()
 
         etInputHex.addTextChangedListener(object : TextWatcher{
