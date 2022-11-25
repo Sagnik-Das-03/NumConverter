@@ -12,27 +12,28 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import com.blogspot.atifsoftwares.animatoolib.Animatoo
 import com.google.android.material.snackbar.Snackbar
-import java.text.DecimalFormat
 import kotlin.math.pow
 
 const val LEADING_ZERO = "0"
 private const val TAG = "MainActivity"
+
 class MainActivity : AppCompatActivity() {
     //Left Views
     private lateinit var tvDecimal: TextView
     private lateinit var tvBinary: TextView
     private lateinit var tvOctal: TextView
-    private lateinit var tvHexaDecimal: TextView
+    private lateinit var tvHexDecimal: TextView
+
     //Right Views
     private lateinit var etInputDecimal: EditText
     private lateinit var tvBinaryOutput: TextView
     private lateinit var tvOctalOutput: TextView
-    private lateinit var tvHexaDecimalOutput: TextView
+    private lateinit var tvHexDecimalOutput: TextView
+
     //Buttons
     private lateinit var btnBinary: Button
     private lateinit var btnOctal: Button
     private lateinit var btnHex: Button
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,17 +42,16 @@ class MainActivity : AppCompatActivity() {
         tvDecimal = findViewById(R.id.tvDecimal)
         tvBinary = findViewById(R.id.tvBinary)
         tvOctal = findViewById(R.id.tvOctal)
-        tvHexaDecimal = findViewById(R.id.tvHex)
+        tvHexDecimal = findViewById(R.id.tvHex)
         //Right Views View Binding
         etInputDecimal = findViewById(R.id.etInput)
         tvBinaryOutput = findViewById(R.id.tvDecimalOutput)
         tvOctalOutput = findViewById(R.id.tvOctalOutput)
-        tvHexaDecimalOutput = findViewById(R.id.tvBinaryOutput)
+        tvHexDecimalOutput = findViewById(R.id.tvBinaryOutput)
         //Buttons View Binding
         btnBinary = findViewById(R.id.btnDecimal)
         btnOctal = findViewById(R.id.btnOctal)
         btnHex = findViewById(R.id.btnHex)
-
         //SnackBar implementation
         Snackbar.make(this.findViewById(R.id.mainLayout),"Enter a Number", Snackbar.LENGTH_INDEFINITE)
             .setAction("Ok"){ }
@@ -69,8 +69,8 @@ class MainActivity : AppCompatActivity() {
                 Log.i(TAG, "After Text Changed $s")
                 convertNumber()
             }
-
         })
+
         //button click handling
         btnBinary.setOnClickListener {
             val intent = Intent(this, InputBinary::class.java)
@@ -96,7 +96,7 @@ class MainActivity : AppCompatActivity() {
         if (etInputDecimal.text.isEmpty()) {
             tvBinaryOutput.text = ""
             tvOctalOutput.text = ""
-            tvHexaDecimalOutput.text = ""
+            tvHexDecimalOutput.text = ""
             return
         }
 
@@ -109,6 +109,7 @@ class MainActivity : AppCompatActivity() {
             val binary = decimal.toLong().toString(2)
             tvBinaryOutput.text = binary
         }
+
         // converting decimal to octal
         if(decimal.contains(".")){
             val octal = convertDecimalToOctal(decimal.toDouble())
@@ -117,16 +118,18 @@ class MainActivity : AppCompatActivity() {
             val octal = decimal.toLong().toString(8)
             tvOctalOutput.text = octal
         }
+
         // converting decimal to hexadecimal
         if (decimal.contains(".")){
             val hex = convertDecimalToHex(decimal.toDouble())
-            tvHexaDecimalOutput.text = hex
+            tvHexDecimalOutput.text = hex
         }else{
             val hex = decimal.toLong().toString(16)
-            tvHexaDecimalOutput.text = hex
+            tvHexDecimalOutput.text = hex
         }
 
     }
+
     private fun convertDecimalToBinary(decimal: Double): String {
         val lShift = (decimal * 2.0.pow(8.0)).toLong()
         val temp = lShift.toString(2).padStart(9,'0')
@@ -140,13 +143,13 @@ class MainActivity : AppCompatActivity() {
         val revOctal = temp.reversed()
         return (revOctal.substring(0, 8)+"."+revOctal.substring(8)).reversed()
     }
+
     private fun convertDecimalToHex(decimal: Double): String {
         val lShift = (decimal*16.0.pow(8.0)).toLong()
         val temp = lShift.toString(16).padStart(9,'0')
         val revHex = temp.reversed()
         return (revHex.substring(0, 8)+"."+revHex.substring(8)).reversed().uppercase()
     }
-
 
 }
 
