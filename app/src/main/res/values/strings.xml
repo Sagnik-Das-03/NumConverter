@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">numConverter</string>
+    <string name="app_name">NumConvert</string>
     <string name="Decimal">Decimal</string>
     <string name="Octal">Octal</string>
     <string name="Binary">Binary</string>
