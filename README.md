@@ -21,6 +21,52 @@ Here's a walkthrough of implemented user stories:
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
+## Instructions to Build
+
+### Method 1:
+* [x] Download Android Studio 
+
+* [x] Click the icon to download
+ 
+<p align="left">
+   <a href='https://developer.android.com/studio?gclid=Cj0KCQjwqoibBhDUARIsAH2OpWi2VQ6w50tP7G8OeiMmIt9gK13cN1et0AU5tZ1O2KnjsOxrTWpP0aAr7TEALw_wcB&gclsrc=aw.ds'><img         width="150" src='https://github.com/Sagnik-Das-03/TIPPER/blob/master/studioicon.jpeg' /></a>
+</p>
+ 
+* [x] Set up Android Studio
+
+
+* [x] Download the project zip file 
+<a href='https://github.com/Sagnik-Das-03/NumConverter/archive/refs/heads/master.zip'>Click here to Download Zip</a>
+
+* [x] Extract it and open in android studio
+
+* [x] Run the app from android studio 
+
+### Method 2:
+* [x] Download the apk
+<a href='https://drive.google.com/file/d/15zkft1RZIwUqpmqQVAs6Uk6eriMVTDn4/view?usp=sharing'>Click here to Download Apk</a>
+* [x] Install the apk on your android device
+* [x] Open the app 
+
+
+## Some TestCases with Various Inputs
+### Light Mode
+<p float="middle">
+    <img src='https://github.com/Sagnik-Das-03/NumConverter/blob/master/numTestLight%20(1).jpg' title='input 1' width='200' alt='input 1' />
+    <img src='https://github.com/Sagnik-Das-03/NumConverter/blob/master/numTestLight%20(2).jpg' title='input 2' width='200' alt='input 2' />
+    <img src='https://github.com/Sagnik-Das-03/NumConverter/blob/master/numTestLight%20(3).jpg' title='input 3' width='200' alt='input 3' />
+    <img src='https://github.com/Sagnik-Das-03/NumConverter/blob/master/numTestLight%20(4).jpg' title='input 4' width='200' alt='input 4' />
+ </p>
+ 
+ ### Dark Mode
+<p float ="middle">
+    <img src='https://github.com/Sagnik-Das-03/NumConverter/blob/master/numTestDark%20(1).jpg' title='input 4' width='200' alt='input 4' />
+    <img src='https://github.com/Sagnik-Das-03/NumConverter/blob/master/numTestDark%20(2).jpg' title='input 4' width='200' alt='input 4' />
+    <img src='https://github.com/Sagnik-Das-03/NumConverter/blob/master/numTestDark%20(3).jpg' title='input 4' width='200' alt='input 4' />
+    <img src='https://github.com/Sagnik-Das-03/NumConverter/blob/master/numTestDark%20(4).jpg' title='input 4' width='200' alt='input 4' />
+</p>
+
+
 ## Features
 
 * Pure Kotlin
