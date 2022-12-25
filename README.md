@@ -17,7 +17,11 @@ The following **required** functionality is completed:
 ## Video Walkthrough
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<p float="middle">
+    <img src='https://github.com/Sagnik-Das-03/NumConverter/blob/master/numTestMain.gif' title='Video WalkThrough' width='200' alt='Video WalkThrough' />
+    <img src='https://github.com/Sagnik-Das-03/NumConverter/blob/master/numTestMainLight.jpg' title='App Mainscreen Light' width='200' alt='App Mainscreen Light' />
+    <img src='https://github.com/Sagnik-Das-03/NumConverter/blob/master/numTestMainDark.jpg' title='App Mainscreen Dark' width='200' alt='App Mainscreen Dark' />
+ </p>
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
