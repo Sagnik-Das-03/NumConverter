@@ -80,7 +80,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2022] [Sagnik Das]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
